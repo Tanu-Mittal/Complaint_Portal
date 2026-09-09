@@ -18,6 +18,7 @@ import MyComplaints from "./pages/customer/MyComplaints";
 import ComplaintDetails from "./pages/customer/ComplaintDetails";
 
 import AgentDashboard from "./pages/agent/Dashboard";
+import AgentComplaintDetail from "./pages/agent/ComplaintDetail";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         {/* Agent */}
         <Route path="/agent" element={<PortalLayout role="agent" />}>
           <Route path="dashboard" element={<AgentDashboard />} />
+          <Route path="complaints/:id" element={<AgentComplaintDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
