@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+import ProfilePhotoEditor from "../common/ProfilePhotoEditor";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -64,7 +65,7 @@ function Sidebar({ role = "admin" }) {
         </div>
 
         <div className="profile-box">
-          <img src="https://i.pravatar.cc/150?img=32" alt="profile" />
+          <ProfilePhotoEditor role={role} name={profile.name} />
           <h3>{profile.name}</h3>
           <span>{profile.tag}</span>
         </div>
@@ -98,3 +99,4 @@ function Sidebar({ role = "admin" }) {
 }
 
 export default Sidebar;
+
